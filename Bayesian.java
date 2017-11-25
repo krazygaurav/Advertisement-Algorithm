@@ -1,10 +1,5 @@
-/* Email Server Protection*/
-/* Bayesian Spam Filter */
-
-//package bayes;
-
 import java.io.*;
-import javax.swing.*;
+import java.uitl.Scanner;
 
 public class Bayesian {
     String message;
@@ -83,7 +78,9 @@ public class Bayesian {
 	}
 	public static void main(String args[]){
 		Bayesian b = new Bayesian();
-		String message = "foo bar https://www.duolingo.com";
+		Scanner sc = new Scanner(System.in);
+		String message = sc.next();
+		//String message = "foo bar https://www.duolingo.com";
 		b.setMessage(message);
 		System.out.print(b.checkSpam());
 	}
